@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Price Prediction</title>
+    <style>
+        body 
+        { 
+        font-family: Arial, sans-serif; 
+        text-align: center; 
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)),url('../static/images/gold3.jpg');
+        background-size: cover;  
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; 
+    }
+    span{
+        background-color:Gold;
+        width: 400px;
+        margin: auto; 
+        display: block; 
+        border-radius: 10px;
+    }
+        form 
+        { 
+            margin: 20px auto; 
+            width: 300px; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+        }
+        input, button 
+        { 
+            width: 100%; 
+            margin: 10px 0; 
+            padding: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size:2.2rem;color:#F5F5DC">Gold Price Prediction</h1>
+    <section>
+    <span>
+    <form action="/predict" method="post">
+        <label for="spx">SPX:</label>
+        <input type="text" name="spx" required>
+        
+        <label for="uso">USO:</label>
+        <input type="text" name="uso" required>
+        
+        <label for="slv">SLV:</label>
+        <input type="text" name="slv" required>
+        
+        <label for="eur_usd">EUR/USD:</label>
+        <input type="text" name="eur_usd" required>
+        
+        <button type="submit" style="font-size:1.3rem;background-color: #046307;color:#F5F5DC;border-radius:10px;height:3rem;width:100%">Predict</button>
+    </form>
+</span>
+</section>
+    {% if prediction_text %}
+        <h2 style="font-size:2rem;color:black">{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
