@@ -10,7 +10,7 @@
         position:relative;
         font-family: Arial, sans-serif; 
         text-align: center; 
-        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6)),url('../static/images/gold3.jpg');
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5)),url('../static/images/gold3.jpg');
         background-size: cover;  
         background-position: center;
         background-repeat: no-repeat;
@@ -79,6 +79,30 @@
             visibility: visible;
             opacity: 1;
         }
+        h2{
+            font-size:2rem;
+            color:black;
+            background-color:#faf8cd;
+            height: 10vh;
+            width:110%;
+            text-align:center;
+            line-height: 10vh;
+            border-radius:5px;
+        }
+        @media (max-width: 768px) {
+            h1{
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size:1rem;
+                height: 6vh;
+                width:110%;
+                text-align:center;
+                line-height: 6vh;
+                margin-bottom: 4rem;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -112,7 +136,7 @@
     </form>
     <section class="predict">
     {% if prediction_text %}
-        <h2 style="font-size:2rem;color:black;background-color:#faf8cd;height: 10vh;width:110%;text-align:center;line-height: 10vh;border-radius:5px">{{ prediction_text }}</h2>
+        <h2 style="">{{ prediction_text }}</h2>
     {% endif %}
     </section>
     <script>
