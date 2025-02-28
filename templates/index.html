@@ -18,7 +18,7 @@
         height: 100vh; 
         overflow:hidden;
     }
-    span{
+    #do{
         background-color:Gold;
         width: 400px;
         margin: auto; 
@@ -71,7 +71,7 @@
             transition: opacity 0.3s;
             top: -25px;
             left: 50%;
-            width: 10rem;
+            display: block;
             text-align:center;
             transform: translateX(-50%);
         }
@@ -88,6 +88,7 @@
             text-align:center;
             line-height: 10vh;
             border-radius:5px;
+            display: block;
         }
         @media (max-width: 768px) {
             h1{
@@ -110,24 +111,24 @@
 
     <form action="/predict" method="post">
         <section class="doto">
-            <span style="height:40vh;display:flex;flex-direction:column;justify-content:center;align-items:center">
+            <span id="do" style="height:40vh;display:flex;flex-direction:column;justify-content:center;align-items:center">
                 <div class="form-group">
-                    <label for="spx">SPX:<span class="tooltip">{S&P 500 Index}</span></label>
+                    <label for="spx">SPX:<span class="tooltip"><b>S&P 500 Index:</b> A stock index,when it drops gold often rises.</span></label>
                     <input type="text" name="spx" required>
                 </div>
                 <div class="form-group">
-                    <label for="uso">USO:<span class="tooltip">{United States Oil Fund}</span></label>
+                    <label for="uso">USO:<span class="tooltip"><b>United States Oil Fund:</b> A fund that tracks oil prices, affecting gold through inflation.</span></label>
                     <input type="text" name="uso" required>
                 </div>
             </span>
 
-            <span style="height:40vh;display:flex;flex-direction:column;justify-content:center;align-items:center">
+            <span id="do" style="height:40vh;display:flex;flex-direction:column;justify-content:center;align-items:center">
                 <div class="form-group">
-                    <label for="slv">SLV:<span class="tooltip">{iShares Silver Trust}</span></label>
+                    <label for="slv">SLV:<span class="tooltip"><b>iShares Silver Trust:</b> A silver ETF that tracks silver prices, often moving inversely to gold.</span></label>
                     <input type="text" name="slv" required>
                 </div>
                 <div class="form-group">
-                    <label for="eur_usd">EUR/USD:<span class="tooltip">{Euro/United States Dollar}</span></label>
+                    <label for="eur_usd">EUR/USD:<span class="tooltip"><b>Euro/United States Dollar:</b> A currency pair, when USD weakens gold usually rises.</span></label>
                     <input type="text" name="eur_usd" required>
                 </div>
             </span>
